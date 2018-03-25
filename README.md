@@ -1,32 +1,31 @@
 # ESP8266 WebSocket MQTT Broker for IoTmanager
 
-Библиотека для прямого подключения IoTmanager'a к ESP8266 через WebSocket без посредников, таких как cloudmqtt.com. ESP выступает в качестве точки доступа Wi-Fi и выполняет функции MQTT брокера, таким образом для общения со смартфоном не нужен доступ в интернет.
+Library for direct connection of IoTmanager'a to ESP8266 through WebSocket without intermediaries, such as cloudmqtt.com. ESP acts as a Wi-Fi access point and serves as an MQTT broker, so you do not need Internet access to communicate with the smartphone.
 
-## Состав
+## Composition
 
-- [MQTTbroker.h] имитация работы брокера для нескольких клиентов (с контролем подписок) 
-- [MQTTbroker_lite.h] только для прямого общения с IoTmanager (без контроля подписок)
+- [MQTTbroker.h] imitation of the broker's work for several clients (with the control of subscriptions)
+- [MQTTbroker_lite.h] only for direct communication with IoTmanager (without control of subscriptions)
 
-## Примеры
+## Examples
 
-В библиотеке есть несколько примеров работы как с lite версией, так и с полной. 
-См. Файл -> Примеры -> MQTTbroker
+In the library there are several examples of work with both the lite version and the full version. See File -> Examples -> MQTTbroker
 
-## Ограничения
+## Restrictions
 
-- Брокер использует версию 3.1.1 протокола MQTT
-- Используется WebSocket без SSL/TLS
-- Соединяется только с использованием библиотеки Paho.js
-- Публикации возможны только с QoS = 0 
+- The broker uses version 3.1.1 of the MQTT protocol
+- Used WebSocket without SSL / TLS
+- Connects only using the Paho.js library
+- Publications are only possible with QoS = 0
 
-## Поддерживаемое железо
+## Tested with
 
-Писалось и тестировалось под ESP8266
+Written and tested under ESP8266
 
-## Известные проблемы
+## Known Issues
 
-Библиотека пока сыровата, в некоторых случаях настройки виджетов вызывают реконнект IoTmanager’a, причину которого я найти пока не могу
+The library is still a draft, in some cases, the settings of the widgets cause the IoTmanager's reconnection, the cause of which I can not find yet
 
-## Версии
+## Versions
 
-v.0.1.0 - минимально работающая версия
+v.0.1.0 - minimum working version
